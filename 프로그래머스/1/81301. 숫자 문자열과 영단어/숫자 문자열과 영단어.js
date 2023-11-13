@@ -1,10 +1,11 @@
 function solution(s){
-    let numbers=['zero', 'one', 'two', 'three','four', 'five', 'six', 'seven', 'eight', 'nine']
-    let answer = s
-    
-    for (let i=0;i<numbers.length;i++){
-        let num = answer.split(numbers[i]);
-        answer = num.join(i);
-    }
-    return Number(answer)
+    const numberWords = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+    let answer = s;
+    numberWords.forEach((word, index) => {
+        //console.log(word, index);
+        while (answer.includes(word)) {
+            answer = answer.replace(word, index);
+        }
+    });
+    return parseInt(answer);
 }
