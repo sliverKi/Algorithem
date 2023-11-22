@@ -6,9 +6,7 @@ function solution(array, n) {
     for(let i=0; i< array.length;i++){
         stack.push(Math.abs(n-array[i]))
         min=Math.min(...stack)
-        minIndex=stack.indexOf(min)
-        console.log("stack: ",stack)      
+        minIndex=stack.indexOf(min) 
     }
-    //return array[stack.indexOf(stack[stack.length-1])]
     return array[minIndex];
 }
