@@ -1,7 +1,6 @@
 function solution(s) {
     let answer = [];
     s=s.split(' ')
-    console.log("s: ", s)
     for(let i=0;i<s.length;i++){
         if(s[i]!=='Z')
             answer.push(s[i])
